@@ -33,7 +33,11 @@ public class C {
     @Override
     public int hashCode() {
         int hash = 1;
-        hash = hash * 10 + (s == null ? 0 : s.hashCode());
+        int add = 0;
+        if(s != null){
+            add = s.hashCode();
+        }
+        hash = hash * 10 + 2 * add;
         return hash;
     }
 }

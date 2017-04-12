@@ -40,9 +40,14 @@ public class D extends C {
 
     @Override
     public int hashCode() {
-// returns an integer consistent with the Java contract for hashCode method;
-// does not return a constant value
-// your code goes here
-        return 1;
+        int hash = 1;
+        hash = hash * 10 + g;
+
+        int add = 0;
+        if(s != null){
+            add = s.hashCode();
+        }
+        hash = hash * 20 + 2 * add;
+        return hash;
     }
 }
